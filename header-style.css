@@ -1,0 +1,121 @@
+/*
+ * File: header-style.css (atau tambahkan di cek.css)
+ * Tujuan: Memastikan styling Header dan Navigasi konsisten dan Dark Mode ready.
+ */
+
+/* --- HEADER CONTAINER --- */
+/* Menggunakan properti header dari kode asli Anda */
+header {
+    background: var(--warna-putih);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    flex-shrink: 0;
+    transition: background-color var(--transisi), box-shadow var(--transisi);
+}
+
+/* --- NAVIGASI DAN LOGO --- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: var(--warna-teks);
+    font-weight: 700;
+    font-size: 1.5rem;
+    transition: color var(--transisi);
+}
+
+.nav-logo img {
+    width: 40px;
+}
+
+/* Menu List */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    align-items: center; /* Agar item menu dan tombol toggle sejajar */
+    gap: 2.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--warna-teks);
+    font-weight: 600;
+    padding: 0.2rem 0;
+    transition: var(--transisi);
+}
+
+/* Indikator Tautan Aktif (Opsional: Tambahkan kelas .active-link pada tautan yang sedang aktif) */
+.nav-menu a:hover,
+.nav-menu a.active-link {
+    color: var(--warna-utama);
+    border-bottom: 2px solid var(--warna-utama);
+}
+
+
+/* --- DARK MODE TOGGLE BUTTON --- */
+#toggleTheme {
+    background: transparent;
+    border: 2px solid var(--warna-teks);
+    color: var(--warna-teks);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: var(--font-utama);
+    transition: var(--transisi);
+    font-size: 0.9rem;
+    white-space: nowrap; /* Mencegah teks tombol terpotong */
+}
+
+#toggleTheme:hover {
+    background: var(--warna-utama);
+    color: var(--warna-putih);
+    border-color: var(--warna-utama);
+}
+
+/* --- DARK MODE ADJUSTMENTS untuk Tombol --- */
+body.dark-mode #toggleTheme {
+    border-color: var(--warna-teks); /* Border terang di mode gelap */
+    background: transparent;
+}
+
+body.dark-mode #toggleTheme:hover {
+    background: var(--warna-utama);
+    color: var(--warna-teks);
+    border-color: var(--warna-utama);
+}
+
+/* --- MOBILE TOGGLE (Sudah ada di cek.css, diulang untuk referensi) --- */
+.nav-toggle {
+    display: none; /* Disembunyikan di desktop */
+}
+
+/* --- MOBILE MENU OVERLAY --- */
+@media (max-width: 768px) {
+    .nav-menu {
+        /* ... (Style mobile menu overlay dari cek.css) ... */
+        position: absolute;
+        top: 70px;
+        /* Tambahkan margin kanan untuk memberi ruang tombol toggle */
+        right: 0; 
+        left: 0;
+    }
+    
+    /* Posisikan tombol mode di dalam menu agar tidak bentrok */
+    #toggleTheme {
+        margin: 1rem auto; 
+        display: block;
+    }
+}

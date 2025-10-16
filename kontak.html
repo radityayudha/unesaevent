@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak Kami | UNESA Event</title> 
+    
+    <link rel="icon" href="railbot/logo/icon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cek.css">
+    <link rel="stylesheet" href="header-style.css">
+</head>
+<body>
+    
+    <div id="header-placeholder"></div>
+    
+    <main id="content-area">
+        
+        <section class="contact-content">
+            <div class="container" style="text-align: center;">
+                
+                <h1>Hubungi Kami</h1>
+                <p class="deskripsi">Kami siap membantu menjawab pertanyaan Anda terkait event, pendaftaran, atau usulan kegiatan.</p>
+
+                <div class="contact-grid" style="display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; text-align: left; max-width: 900px; margin: 0 auto;">
+                    
+                    <div class="contact-info" style="padding: 2rem; background: var(--warna-putih); border-radius: 8px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); transition: background-color var(--transisi);">
+                        <h3>Informasi Cepat</h3>
+                        <p style="font-size: 0.95rem;">
+                            <strong>Alamat Sekretariat:</strong><br>
+                            Gedung Rektorat UNESA Kampus Lidah Wetan<br>
+                            Surabaya, Jawa Timur 60213
+                        </p>
+                        <p style="font-size: 0.95rem;">
+                            <strong>Email Resmi:</strong><br>
+                            <a href="mailto:info@unesa.ac.id" style="color: var(--warna-teks); text-decoration: none;">event@unesa.ac.id</a>
+                        </p>
+                        <p style="font-size: 0.95rem;">
+                            <strong>Telepon:</strong><br>
+                            (031) 9942 5554
+                        </p>
+                        </div>
+
+                    <div class="form-wrapper">
+                        <h2>Kirim Pesan</h2>
+                        <form id="contactForm" class="form-kontak">
+                            <div class="form-grup">
+                                <label for="nama">Nama Lengkap</label>
+                                <input type="text" id="nama" name="nama" required>
+                                <span class="error-message" id="error-nama"></span>
+                            </div>
+
+                            <div class="form-grup">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                                <span class="error-message" id="error-email"></span>
+                            </div>
+
+                            <div class="form-grup">
+                                <label for="subjek">Subjek</label>
+                                <input type="text" id="subjek" name="subjek" required>
+                            </div>
+
+                            <div class="form-grup">
+                                <label for="pesan">Pesan Anda</label>
+                                <textarea id="pesan" name="pesan" rows="5" required></textarea>
+                                <span class="error-message" id="error-pesan"></span>
+                            </div>
+
+                            <button type="submit" class="tombol-utama">Kirim Pesan</button>
+                            <p class="success-message" id="success-message" style="display: none;"></p>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="footer-placeholder"></div>
+    
+    <script src="script.js"></script>
+    
+    </body>
+</html>

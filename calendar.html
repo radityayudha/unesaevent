@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalender Event Tahunan | UNESA</title> 
+    
+    <link rel="icon" href="railbot/logo/icon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cek.css">
+    <link rel="stylesheet" href="header-style.css">
+
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/main.min.css' rel='stylesheet' />
+
+</head>
+<body>
+    
+    <div id="header-placeholder"></div>
+    
+    <main id="content-area">
+        
+        <section class="calendar-main">
+            <div class="container">
+                
+                <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem; text-align: left;">Kalender Event UNESA</h1>
+                <p class="deskripsi" style="text-align: left; margin-top: 0;">Lihat dan filter semua jadwal kegiatan tahunan Universitas Negeri Surabaya.</p>
+
+                <div class="event-filter">
+                    
+                    <select id="category-filter">
+                        <option value="">Semua Kategori</option>
+                        <option value="akademik">Akademik & Seminar</option>
+                        <option value="olahraga">Olahraga</option>
+                        <option value="seni">Seni & Budaya</option>
+                        <option value="komunitas">Komunitas & UKM</option>
+                        <option value="lainnya">Lainnya</option>
+                    </select>
+
+                    <select id="year-filter">
+                        <option value="2025">Tahun 2025</option>
+                        <option value="2024">Tahun 2024</option>
+                    </select>
+                    
+                    <input type="search" id="event-search" placeholder="Cari Event (Contoh: Dies Natalis)">
+
+                </div>
+
+                <div id="full-calendar-container">
+                    </div>
+                
+            </div>
+        </section>
+
+    </main>
+
+    <div id="footer-placeholder"></div>
+    
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
